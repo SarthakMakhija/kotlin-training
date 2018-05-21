@@ -9,5 +9,6 @@ Repository to hold Kotlin training material
  5. Operator Overloading
  6. DSL
  7. Coroutines
+ 8. Kotlin Arrow
  
  ...
