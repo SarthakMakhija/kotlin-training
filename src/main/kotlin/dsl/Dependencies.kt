@@ -31,6 +31,6 @@ private interface Configuration {
     val coordinate: String
 }
 
-class CompileConfiguration    (override val coordinate: String) : Configuration
-class TestCompileConfiguration(override val coordinate: String) : Configuration
-class TestRuntimeConfiguration(override val coordinate: String) : Configuration
+private class CompileConfiguration    (override val coordinate: String) : Configuration
+private class TestCompileConfiguration(override val coordinate: String) : Configuration
+private class TestRuntimeConfiguration(override val coordinate: String) : Configuration

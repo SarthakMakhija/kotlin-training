@@ -4,7 +4,7 @@ Generics                :not much
 sealed classes          :done
 
 ----
-DSL
+DSL                     :done
 delegation
 lazy property
 lambda with receiver
