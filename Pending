@@ -1,0 +1,16 @@
+Local functions         :done
+Nulls                   :done
+Generics                :not much
+sealed classes          :done
+
+----
+DSL
+delegation
+lazy property
+lambda with receiver
+SAM constructor
+---------
+let,apply,run in ppt
+kotlin types (unit / nothing) and collections in ppt
+Custom getter, vs constructor vs field setting ---
+companion object
