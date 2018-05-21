@@ -1,4 +1,4 @@
-package infix
+package misc
 
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.FunSpec
