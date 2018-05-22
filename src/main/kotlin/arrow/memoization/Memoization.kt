@@ -19,8 +19,6 @@ object Memoization {
 }
 
 fun main(args: Array<String>){
-
-
     println(measureTimeMillis { Memoization.recursiveFib(n = 40) })
     println(measureTimeMillis { Memoization.memoization(n = 40) })
 }
