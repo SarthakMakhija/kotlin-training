@@ -1,4 +1,4 @@
-package lambdas.with.receiver
+package lambda.with.receiver
 
 object LambdaWithReceiver {
 

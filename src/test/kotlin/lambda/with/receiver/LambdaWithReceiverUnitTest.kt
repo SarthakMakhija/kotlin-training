@@ -1,4 +1,4 @@
-package lambdas.with.receiver
+package lambda.with.receiver
 
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.FunSpec
