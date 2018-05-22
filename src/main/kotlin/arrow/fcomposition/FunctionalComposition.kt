@@ -1,4 +1,4 @@
-package arrow.functional.composition
+package arrow.fcomposition
 
 import arrow.core.andThen
 import arrow.syntax.function.compose

@@ -1,4 +1,4 @@
-package arrow.functional.composition
+package arrow.fcomposition
 
 import io.kotlintest.shouldBe
 import io.kotlintest.specs.FunSpec
