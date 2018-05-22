@@ -1,21 +1,17 @@
 package coroutine.basic
 
-import org.jboss.arquillian.container.test.api.Deployment
-import org.jboss.arquillian.junit.Arquillian
-import org.jboss.shrinkwrap.api.ShrinkWrap
-import org.jboss.shrinkwrap.api.asset.EmptyAsset
-import org.jboss.shrinkwrap.api.spec.JavaArchive
-import org.junit.runner.RunWith
+import io.kotlintest.shouldBe
+import io.kotlintest.specs.FunSpec
 
-import org.junit.Assert.*
+class WeatherServiceUnitTest : FunSpec() {
 
-@RunWith(Arquillian::class)
-object WeatherServiceUnitTest {
-    @Deployment
-    fun createDeployment(): JavaArchive {
-        return ShrinkWrap.create(JavaArchive::class.java)
-                .addClass(WeatherService::class.java)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
+    init {
+        test("should return weather"){
+            val weatherService = WeatherService(HumidityService(), TemperatureService())
+            val weather        = weatherService.todaysWeather()
+
+            weather.humidity() shouldBe 12.90
+            weather.temperature() shouldBe 24.90
+        }
     }
-
 }

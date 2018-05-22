@@ -10,7 +10,9 @@ object Memoization {
     fun memoization(n : Long): Long {
 
         var memoizedFib: (Long) -> Long = { it }
-        memoizedFib = { n: Long -> if (n < 2) n else memoizedFib(n - 1) + memoizedFib(n - 2) }.memoize()
+        memoizedFib                     = {
+                                            n1: Long -> if (n1 < 2) n1 else memoizedFib(n1 - 1) + memoizedFib(n1 - 2)
+                                          }.memoize()
 
         return memoizedFib(n)
     }

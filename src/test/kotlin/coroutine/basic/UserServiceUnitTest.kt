@@ -1,21 +1,20 @@
 package coroutine.basic
 
-import org.jboss.arquillian.container.test.api.Deployment
-import org.jboss.arquillian.junit.Arquillian
-import org.jboss.shrinkwrap.api.ShrinkWrap
-import org.jboss.shrinkwrap.api.asset.EmptyAsset
-import org.jboss.shrinkwrap.api.spec.JavaArchive
-import org.junit.runner.RunWith
+import io.kotlintest.shouldBe
+import io.kotlintest.specs.FunSpec
+import kotlinx.coroutines.experimental.runBlocking
 
-import org.junit.Assert.*
+class UserServiceUnitTest : FunSpec() {
 
-@RunWith(Arquillian::class)
-object UserServiceUnitTest {
-    @Deployment
-    fun createDeployment(): JavaArchive {
-        return ShrinkWrap.create(JavaArchive::class.java)
-                .addClass(UserService::class.java)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
+    init {
+        test("should return all users") {
+            val userService   = UserService()
+            val deferredUsers = userService.findAll()
+
+            runBlocking {
+                val users = deferredUsers.await()
+                users shouldBe listOf(User("John"), User("Martin"))
+            }
+        }
     }
-
 }

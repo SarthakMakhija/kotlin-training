@@ -18,6 +18,12 @@ apply plugin: "kotlin-kapt"
 
 sourceCompatibility = 1.8
 
+kotlin {
+    experimental {
+        coroutines 'enable'
+    }
+}
+
 test {
     useJUnitPlatform()
 }
@@ -35,6 +41,7 @@ dependencies {
     compile     "io.arrow-kt:arrow-data:0.7.1"
     compile     "io.arrow-kt:arrow-instances-core:0.7.1"
     compile     "io.arrow-kt:arrow-instances-data:0.7.1"
+    compile     "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.21"
     kapt        "io.arrow-kt:arrow-annotations-processor:0.7.1"
 
     testCompile "io.kotlintest:kotlintest-runner-junit5:3.1.0"
