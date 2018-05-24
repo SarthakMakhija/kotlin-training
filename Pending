@@ -9,8 +9,8 @@ delegation
 lazy property
 lambda with receiver    :done
 SAM constructor
-coroutine
-Arrow
+coroutine               :done
+Arrow                   :done
 ---------
 let,apply,run in ppt
 kotlin types (unit / nothing) and collections in ppt
@@ -19,5 +19,9 @@ companion object
 @JvmOverloads - ppt,
 reified - ppt
 ------------
-Kotlin Coroutines
+Kotlin Coroutines : done
 One blank project
+
+https://www.kotlindevelopment.com/deep-dive-coroutines/
+https://discuss.kotlinlang.org/t/news-from-kotlintest/1797
+https://www.51zero.com/blog/testing-in-kotlin
