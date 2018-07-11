@@ -35,14 +35,19 @@ repositories {
 
 dependencies {
     compile     "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    compile     "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.21"
     compile     "io.arrow-kt:arrow-core:0.7.1"
     compile     "io.arrow-kt:arrow-syntax:0.7.1"
-    compile     "io.arrow-kt:arrow-typeclasses:0.7.1"
-    compile     "io.arrow-kt:arrow-data:0.7.1"
-    compile     "io.arrow-kt:arrow-instances-core:0.7.1"
-    compile     "io.arrow-kt:arrow-instances-data:0.7.1"
-    compile     "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.21"
-    kapt        "io.arrow-kt:arrow-annotations-processor:0.7.1"
+    compile     "io.arrow-kt:arrow-effects-kotlinx-coroutines:0.7.1"
+
+
+    /**
+     *     compile     "io.arrow-kt:arrow-typeclasses:0.7.1"
+     *     compile     "io.arrow-kt:arrow-data:0.7.1"
+     *     compile     "io.arrow-kt:arrow-instances-core:0.7.1"
+     *     compile     "io.arrow-kt:arrow-instances-data:0.7.1"
+     *     kapt        "io.arrow-kt:arrow-annotations-processor:0.7.1"
+     */
 
     testCompile "io.kotlintest:kotlintest-runner-junit5:3.1.0"
 }
